@@ -538,4 +538,5 @@
 		<property name="itemCleanupHooks" ref="csTicketRetentionHooks"/>
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
+	<bean id="todayDispatchingOrdersJob" class="com.nagarro.core.job.TodayDispatchingOrdersJobPerformable" parent="abstractJobPerformable"/>
 </beans>

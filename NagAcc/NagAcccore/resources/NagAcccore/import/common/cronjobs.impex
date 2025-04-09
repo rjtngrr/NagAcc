@@ -29,7 +29,10 @@ INSERT_UPDATE CronJob;code[unique=true];job(code);sessionLanguage(isoCode)[defau
 ;ordersRetentionCronJob;ordersRetentionJob;
 ;ticketsRetentionCronJob;ticketsRetentionJob;
 ;ticketsStagnationJob;ticketsFSStagnationJob;
+;todayDispatchingOrdersCronJob;todayDispatchingOrdersJob ;
 
+INSERT_UPDATE ServicelayerJob;code[unique=true];springId
+;todayDispatchingOrdersJob;todayDispatchingOrdersJob
 # Run CronJobs at 3:05 AM every day
 INSERT_UPDATE Trigger;cronJob(code)[unique=true];second[default=0];minute[default=5];hour[default=3];day[default=-1];month[default=-1];year[default=-1];relative[default=false];active[default=false];maxAcceptableDelay[default=-1]
 ;customersWithOrdersRetentionCronJob;
@@ -38,3 +41,5 @@ INSERT_UPDATE Trigger;cronJob(code)[unique=true];second[default=0];minute[defaul
 ;ticketsRetentionCronJob;
 # Run the CloseStagnantServiceTicketsJob at 12:05 AM every day
 ;ticketsStagnationJob;;;12;0;;;;true;
+INSERT_UPDATE Trigger;cronJob(code)[unique=true];cronExpression
+;todayDispatchingOrdersCronJob;0 0 0 ? * * *
