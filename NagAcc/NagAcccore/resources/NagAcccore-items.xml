@@ -31,6 +31,15 @@
 
         <!-- Add your item definitions here -->
 
+            <itemtype code="Order" autocreate="false" generate="false">
+                <attributes>
+                    <attribute qualifier="dispatchDate" type="java.util.Date">
+                        <description>dispatch date</description>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
             <itemtype code="CMSSite" autocreate="false" generate="false">
                 <attributes>
                     <attribute qualifier="todayDispatchingOrders" type="OrderCollection">
