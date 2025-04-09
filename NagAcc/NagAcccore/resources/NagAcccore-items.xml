@@ -36,6 +36,23 @@
     <itemtypes>
 
         <!-- Add your item definitions here -->
+        <typegroup name="Nagarro">
+            <itemtype code="Seller">
+                <description>seller model</description>
+                <deployment table="Sellers" typecode="10102"/>
+                <attributes>
+                    <attribute qualifier="sellerName" type="localized:java.lang.String">
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="leadTime" type="java.lang.Integer">
+                        <description> number of days dealer generally takes to displatch products</description>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="sellerBanner" type="Media">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
             <itemtype code="SellerCarouselComponent" extends="SimpleCMSComponent">
                 <description> renders rotating images of seller banners</description>
             </itemtype>
