@@ -26,7 +26,13 @@
             <value code="YELLOW"/>
         </enumtype>
     </enumtypes>
-
+    <relations>
+        <relation code="Sellers2Products" localized="false">
+            <deployment table="Sellers2ProductsTable" typecode="10103"/>
+            <sourceElement type="Product" cardinality="many" qualifier="products"/>
+            <targetElement type="Seller" cardinality="many" qualifier="sellers"/>
+        </relation>
+    </relations>
     <itemtypes>
 
         <!-- Add your item definitions here -->
