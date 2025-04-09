@@ -30,6 +30,9 @@
     <itemtypes>
 
         <!-- Add your item definitions here -->
+            <itemtype code="SellerCarouselComponent" extends="SimpleCMSComponent">
+                <description> renders rotating images of seller banners</description>
+            </itemtype>
 
             <itemtype code="Order" autocreate="false" generate="false">
                 <attributes>
