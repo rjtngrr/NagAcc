@@ -1,0 +1,82 @@
+.metadata
+gensrc/
+eclipsebin/
+classes/
+*.class
+commonwebsrc
+extensions/*/.settings
+.springBeans
+platformhome.properties
+*testclasses.xml
+extensioninfo.xsd
+*hmc.jar
+hmc.xsd
+items.xsd
+beans.xsd
+ruleset.xml
+*.log
+*.build.number
+**/.vscode
+
+*.iml
+.idea/
+
+.sonar/
+
+#  Addon specific copy folders
+**/_ui-src/addons
+**/_ui/addons
+**/views/addons
+**/tld/addons
+**/tags/addons
+**/messages/addons
+**/web/addonsrc
+**/web/addontestsrc
+**/node_modules
+build.xml
+
+#Cockpits
+**/web/webroot/cockpit
+**/web/webroot/cmscockpit
+**/web/webroot/productcockpit
+
+.lastupdate
+*solrsearchaddonhmc.jar
+*hybrisconnector_bof.jar
+*backoffice_bof.jar
+
+wro_addons.xml
+
+
+*/web/webroot/_ui/responsive/*/css/
+
+**/node_modules/
+**/dist/
+*/web/webroot/_ui/responsive/*/fonts/
+
+.DS_Store
+
+# Dynamically compiled assets (less/js/fonts/images/etc)
+**/_ui
+
+# # SmartEdit generated files
+# lynxsmartedit/coverage
+# lynxsmartedit/smartedit-build
+# lynxsmartedit/smartedit-custom-build/generated/
+# lynxsmartedit/jsTarget/
+# lynxsmartedit/package.json
+# lynxsmartedit/web/webroot/lynxsmartedit/js
+# lynxsmartedit/web/webroot/css
+# lynxsmartedit/web/webroot/WEB-INF/views/*
+# !lynxsmartedit/web/webroot/WEB-INF/views/index.jsp
+
+# Kafka libs
+# lynxmdmskafkalistener/lib
+
+# Core libs
+*core/lib
+
+#jalo generated classes
+*/jalo/*
+
+*NagAcctest*
