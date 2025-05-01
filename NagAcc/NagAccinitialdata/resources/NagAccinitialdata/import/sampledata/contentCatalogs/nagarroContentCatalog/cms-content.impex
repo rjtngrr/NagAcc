@@ -19,6 +19,9 @@ $contentPage=contentPage(uid, $contentCV);
 $siteResource=jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/contentCatalogs/$contentCatalog
 $productResource=jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/productCatalogs/$productCatalog
 $jarResourceCms=jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/cockpits/cmscockpit
+$siteResource = jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$productResource = jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/sampledata/productCatalogs/$productCatalog
+$jarResourceCms = jar:com.nagarro.initialdata.setup.InitialDataSystemSetup&/NagAccinitialdata/import/sampledata/cockpits/cmscockpit
 
 
 # CMS Site Settings
@@ -102,6 +105,8 @@ INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images']
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; cmsComponents(&componentRef)
+                         ;                          ; ProductLeftRefinements ; RefinementFacetComponent
 
 # Category Pages
 INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)
@@ -151,7 +156,8 @@ INSERT_UPDATE CMSActionRestriction;$contentCV[unique=true];uid[unique=true];name
 INSERT_UPDATE AddToCartAction;$contentCV[unique=true];uid[unique=true];url;name;restrictions(uid,$contentCV);&actionRef
 
 # CMS ListAddToCartAction
-INSERT_UPDATE ListAddToCartAction;$contentCV[unique=true];uid[unique=true];url;name;restrictions(uid,$contentCV);&actionRef
+INSERT_UPDATE ListAddToCartAction; $contentCV[unique = true]; uid[unique = true]  ; url       ; name                            ; restrictions(uid, $contentCV); &actionRef
+                                 ;                          ; ListAddToCartAction ; /cart/add ; Product Add To Cart Action List ;                              ; ListAddToCartAction
 
 # CMS ListOrderForm Action
 INSERT_UPDATE ListOrderFormAction;$contentCV[unique=true];uid[unique=true];url;name;restrictions(uid,$contentCV);&actionRef
@@ -354,7 +360,8 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 
 ##### ProductListPage #####
 # ContentSlot
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]; name                               ; active; cmsComponents(&componentRef); ; ;
+                         ;                          ; ProductListSlot   ; Product List Slot for Product List ; true  ; ProductListComponent        ; ; ;
 
 ##### ProductGridPage #####
 # ContentSlot
