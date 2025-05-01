@@ -539,4 +539,7 @@
 		<property name="ticketBusinessService" ref="ticketBusinessService"/>
 	</bean>
 	<bean id="todayDispatchingOrdersJob" class="com.nagarro.core.job.TodayDispatchingOrdersJobPerformable" parent="abstractJobPerformable"/>
+	<alias name="nagAccCommerceAddToCartStrategy" alias="commerceAddToCartStrategy"/>
+	<bean id="nagAccCommerceAddToCartStrategy" class="com.nagarro.core.strategies.impl.NagAccCommerceAddToCartStrategy"
+		  parent="defaultCommerceAddToCartStrategy"/>
 </beans>
