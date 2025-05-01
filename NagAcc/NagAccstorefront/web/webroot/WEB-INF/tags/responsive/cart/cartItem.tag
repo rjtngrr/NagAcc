@@ -226,7 +226,10 @@
                     </c:if>
                 </c:if>
             </div>
-
+            <%-- Seller Name --%>
+            <div class="item__seller">
+                <span>${entry.seller.sellerName}</span>
+            </div>
             <%-- total --%>
             <ycommerce:testId code="cart_totalProductPrice_label">
                 <div class="item__total js-item-total hidden-xs hidden-sm">

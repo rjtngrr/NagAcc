@@ -197,4 +197,10 @@
 		</property>
 	</bean>
 
+	<bean id="nagarroOrderEntryPopulator" class="com.nagarro.facades.populators.NagarroOrderEntryPopulator"/>
+
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="orderEntryConverter"/>
+		<property name="add" ref="nagarroOrderEntryPopulator"/>
+	</bean>
 </beans>

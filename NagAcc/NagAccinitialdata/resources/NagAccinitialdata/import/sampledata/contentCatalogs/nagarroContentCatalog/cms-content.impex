@@ -166,7 +166,8 @@ INSERT_UPDATE ViewOrderAction;$contentCV[unique=true];uid[unique=true];url;name;
 INSERT_UPDATE ViewStoreAction;$contentCV[unique=true];uid[unique=true];url;name;restrictions(uid,$contentCV);&actionRef
 
 ##### Jsp Include Component #####
-INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;&componentRef
+INSERT_UPDATE JspIncludeComponent; $contentCV[unique = true]; uid[unique = true]; name                   ; page            ; &componentRef
+                                 ;                          ; CartComponent     ; Cart Display Component ; cartDisplay.jsp ; CartComponent
 
 INSERT_UPDATE BreadcrumbComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
 
@@ -220,9 +221,11 @@ INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];nam
 
 INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]  ; name                   ; active; cmsComponents(&componentRef)
+                         ;                          ; TopContent-cartPage ; Top Slot for Cart Page ; true  ; CartComponent
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='cartPage'];contentSlot(uid,$contentCV)[unique=true]
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]        ; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'cartPage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; TopContentSlotForCartPage ; TopContent             ;                                                           ; TopContent-cartPage
 
 ###### Checkout Login Page ######
 
