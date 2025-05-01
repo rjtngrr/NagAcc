@@ -94,5 +94,7 @@
 		<property name="eventService" ref="eventService"/>
 	</bean>
 
+	<bean id="addDispatchDateAction" class="com.nagarro.fulfilmentprocess.actions.order.AddDispatchDateAction"
+		  parent="abstractAction"/>
 
 </beans>
