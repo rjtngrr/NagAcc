@@ -3,6 +3,7 @@
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 <%@ taglib prefix="ycommerce" uri="http://hybris.com/tld/ycommercetags"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="product-details page-title">
 	<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
@@ -32,6 +33,28 @@
 					<cms:pageSlot position="VariantSelector" var="component" element="div" class="page-details-variants-select">
 						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-variants-select-component"/>
 					</cms:pageSlot>
+                    <c:if test="${not empty product.sellers}">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>
+                                        Seller Name
+                                    </td>
+                                    <td>
+                                        Lead time
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${product.sellers}" var="seller">
+                                    <tr>
+                                        <td>${seller.sellerName}</td>
+                                        <td>${seller.leadTime}</td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </c:if>
 					<cms:pageSlot position="AddToCart" var="component" element="div" class="page-details-variants-select">
 						<cms:component component="${component}" element="div" class="yComponentWrapper page-details-add-to-cart-component"/>
 					</cms:pageSlot>

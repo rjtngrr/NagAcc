@@ -182,4 +182,19 @@
 	</bean>
 
 	<bean id="genderData" class="com.nagarro.facades.product.data.GenderData" scope="prototype"/>
+	<bean id="productSellerPopulator" class="com.nagarro.facades.populators.ProductSellerPopulator" />
+	<bean id="sellerPopulator" class="com.nagarro.facades.populators.SellerPopulator" />
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add" ref="productSellerPopulator"/>
+	</bean>
+	<bean id="sellerConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="com.nagarro.facades.seller.dto.SellerData"/>
+		<property name="populators">
+			<list>
+				<ref bean="sellerPopulator"/>
+			</list>
+		</property>
+	</bean>
+
 </beans>

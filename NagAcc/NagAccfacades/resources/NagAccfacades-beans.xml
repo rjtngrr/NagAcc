@@ -4,8 +4,14 @@
 -->
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="beans.xsd">
 
+	<bean class="com.nagarro.facades.seller.dto.SellerData">
+		<property name="sellerName" type="String"/>
+		<property name="leadTime" type="String"/>
+		<property name="sellerBanner" type="de.hybris.platform.cmsfacades.data.MediaData"/>
+	</bean>
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;com.nagarro.facades.product.data.GenderData>"/>
+		<property name="sellers" type="java.util.List&lt;com.nagarro.facades.seller.dto.SellerData&gt;"/>
 	</bean>
 
 	<bean class="com.nagarro.facades.product.data.GenderData">
