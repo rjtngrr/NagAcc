@@ -101,6 +101,8 @@ INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true
 # CMS Search Results List Component
 INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
 
+INSERT_UPDATE SellerCarouselComponent; $contentCV[unique = true]; uid[unique = true]      ; name                    ; &componentRef
+                                     ;                          ; HomepageSellerCarousel1 ; HomepageSellerCarousel1 ; HomepageSellerCarousel1
 # Content Slots
 INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true]     ; cmsComponents(&componentRef)
                          ;                          ; ProductLeftRefinements ; RefinementFacetComponent
@@ -187,10 +189,10 @@ INSERT_UPDATE RotatingImagesComponent;$contentCV[unique=true];uid[unique=true];n
 
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true]
-
+INSERT_UPDATE ContentSlot; $contentCV[unique = true]; uid[unique = true] ; name                         ; active; cmsComponents(&componentRef)
+                         ;                          ; SellerCarouselSlot ; Seller Carousel Content Slot ; true  ; HomepageSellerCarousel1
+INSERT_UPDATE ContentSlotForPage; $contentCV[unique = true]; uid[unique = true]; position[unique = true]; page(uid, $contentCV)[unique = true][default = 'homepage']; contentSlot(uid, $contentCV)[unique = true]
+                                ;                          ; Section0-homepage ; Section0               ;                                                           ; SellerCarouselSlot
 ###### Category Landing Page ######
 
 INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)

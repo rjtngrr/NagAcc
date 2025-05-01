@@ -3,6 +3,7 @@
  */
 package com.nagarro.storefront.controllers;
 
+import com.nagarro.core.model.SellerCarouselComponentModel;
 import de.hybris.platform.acceleratorcms.model.components.CMSTabParagraphContainerModel;
 import de.hybris.platform.acceleratorcms.model.components.CartSuggestionComponentModel;
 import de.hybris.platform.acceleratorcms.model.components.CategoryFeatureComponentModel;
@@ -19,6 +20,7 @@ import de.hybris.platform.cms2lib.model.components.ProductCarouselComponentModel
 
 
 /**
+ *
  */
 public interface ControllerConstants
 {
@@ -55,6 +57,7 @@ public interface ControllerConstants
 			String SubCategoryListComponent = _Prefix + SubCategoryListComponentModel._TYPECODE + _Suffix; // NOSONAR
 			String SimpleResponsiveBannerComponent = _Prefix + SimpleResponsiveBannerComponentModel._TYPECODE + _Suffix; // NOSONAR
 			String CMSTabParagraphContainer = _Prefix + CMSTabParagraphContainerModel._TYPECODE + _Suffix; // NOSONAR
+			String SellerCarouselComponent = _Prefix + SellerCarouselComponentModel._TYPECODE + _Suffix;
 		}
 	}
 

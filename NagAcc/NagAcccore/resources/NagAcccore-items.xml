@@ -53,8 +53,9 @@
                     </attribute>
                 </attributes>
             </itemtype>
-            <itemtype code="SellerCarouselComponent" extends="SimpleCMSComponent">
-                <description> renders rotating images of seller banners</description>
+            <itemtype code="SellerCarouselComponent" extends="SimpleCMSComponent"
+                      jaloclass="com.nagarro.core.jalo.SellerCarouselComponent">
+                <description>renders rotating images of seller banners</description>
             </itemtype>
 
             <itemtype code="Order" autocreate="false" generate="false">
