@@ -10,6 +10,7 @@ public final class NagAccCoreConstants extends GeneratedNagAccCoreConstants
 {
 	public static final String EXTENSIONNAME = "NagAcccore";
 	public static final String NAGARRO = "nagarro";
+	public static final String SHORT_DATE_PATTERN = "yyyy/MM/dd";
 
 
 	private NagAccCoreConstants()
