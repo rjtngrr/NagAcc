@@ -13,3 +13,7 @@ $prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1Pr
 $approved=approvalstatus(code)[default='approved']
 
 UPDATE Product;code[unique=true];$prices;$approved;$catalogVersion;Europe1PriceFactory_PTG(code)
+;P001;120 USD;;;
+;P002;122 N USD;;;
+;P003;122 N USD;;;
+;P004;122 N USD;;;

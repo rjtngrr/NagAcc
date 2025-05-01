@@ -13,4 +13,8 @@ $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[defa
 $lang=en
 
 # Update allProducts with localisations
-UPDATE Product;code[unique=true];$catalogVersion;name[lang=$lang];summary[lang=$lang];description[lang=$lang]
+UPDATE Product; code[unique = true]; $catalogVersion; name[lang = $lang]; summary[lang = $lang]    ; description[lang = $lang]
+              ; P001               ;                ; Product One       ; Summary of Product One   ; Description of Product One
+              ; P002               ;                ; Product Two       ; Summary of Product Two   ; Description of Product Two
+              ; P003               ;                ; Product Three     ; Summary of Product Three ; Description of Product Three
+              ; P004               ;                ; Product Four      ; Summary of Product Four  ; Description of Product Four
