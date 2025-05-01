@@ -14,11 +14,14 @@
 
 	<!-- System Setup -->
 
-	<bean id="yAcceleratorInitialDataSystemSetup"
+	<bean id="nagAccInitialDataSystemSetup"
 	      class="com.nagarro.initialdata.setup.InitialDataSystemSetup"
 	      parent="abstractCoreSystemSetup">
 		<property name="coreDataImportService" ref="coreDataImportService"/>
 		<property name="sampleDataImportService" ref="sampleDataImportService"/>
 	</bean>
 
+    <alias name="nagAccSampleDataImportService" alias="sampleDataImportService"/>
+    <bean id="nagAccSampleDataImportService" class="com.nagarro.initialdata.setup.service.NagAccSampleDataImportService"
+          parent="defaultSampleDataImportService"/>
 </beans>
