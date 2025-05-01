@@ -73,6 +73,13 @@
                     </attribute>
                 </attributes>
             </itemtype>
+            <itemtype code="AbstractOrderEntry" generate="false" autocreate="false">
+                <attributes>
+                    <attribute qualifier="seller" type="Seller">
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
 
         <!-- TypeGroups are for structure of this file only -->
