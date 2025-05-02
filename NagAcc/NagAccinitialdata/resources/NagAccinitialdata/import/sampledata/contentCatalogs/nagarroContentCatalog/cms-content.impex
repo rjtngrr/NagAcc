@@ -88,9 +88,11 @@ INSERT_UPDATE LanguageCurrencyComponent;$contentCV[unique=true];uid[unique=true]
 
 # CMS Product Refinement Component
 INSERT_UPDATE ProductRefinementComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+;;RefinementFacetComponent;Product Refinement Facet Component;RefinementFacetComponent
 
 # CMS Product List Component
 INSERT_UPDATE CMSProductListComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
+;;ProductListComponent;Product List Component;ListAddToCartAction;ProductListComponent
 
 # CMS Product Grid Component
 INSERT_UPDATE ProductGridComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
@@ -98,8 +100,9 @@ INSERT_UPDATE ProductGridComponent;$contentCV[unique=true];uid[unique=true];name
 # CMS Search Results List Component
 INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
 
-# CMS Search Results List Component
-INSERT_UPDATE SearchResultsListComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
+# CMS Search Results Grid Component
+INSERT_UPDATE SearchResultsGridComponent;$contentCV[unique=true];uid[unique=true];name;actions(uid,$contentCV);&componentRef
+                                        ;;SearchResultsGrid;Search Result Grid Component;ListAddToCartAction;SearchResultsGrid
 
 INSERT_UPDATE SellerCarouselComponent; $contentCV[unique = true]; uid[unique = true]      ; name                    ; &componentRef
                                      ;                          ; HomepageSellerCarousel1 ; HomepageSellerCarousel1 ; HomepageSellerCarousel1
@@ -374,6 +377,7 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 ##### SearchResultGridPage #####
 # ContentSlot
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+;;SearchResultsGridSlot;Search Result Grid Slot for Search List;true;SearchResultsGrid;;;
 
 ##### Customer Login #####
 # ContentSlot
