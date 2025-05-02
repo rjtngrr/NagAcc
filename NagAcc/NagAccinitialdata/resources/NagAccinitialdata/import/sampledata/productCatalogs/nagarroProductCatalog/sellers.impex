@@ -5,17 +5,8 @@ $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[defa
 
 UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
 
-INSERT_UPDATE Seller;sellerName[lang=en][unique=true];leadTime
-;S001;1
-;S002;2
-;S003;3
-;S004;4
-
-UPDATE Product;code[unique=true];$catalogVersion;sellers(sellerName[lang=en])[mode=append]
-;P001;;S001
-;P001;;S002
-;P001;;S003
-;P002;;S001
-;P003;;S003
-;P004;;S002
-;P002;;S004
+INSERT_UPDATE Seller;sellerName[lang=en][unique=true];leadTime;products(code,$catalogVersion)
+;S001;1;P001,P002
+;S002;2;P001,P004
+;S003;3;P001,P003
+;S004;4;P002
